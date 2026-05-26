@@ -76,7 +76,6 @@ header .wrap { max-width: 1080px; display: flex; align-items: center; justify-co
   color: var(--text);
 }
 .wordmark:hover { opacity: 1; color: var(--text); }
-.wordmark .dot { color: var(--primary); margin-left: 2px; }
 nav { display: flex; gap: 26px; font-size: 14px; }
 nav a { color: var(--text-soft); }
 nav a:hover { color: var(--primary); opacity: 1; }
