@@ -1,0 +1,12 @@
+name = "vowloop-web"
+compatibility_date = "2026-01-01"
+
+# Tell Workers Builds to publish this directory as static assets. By scoping
+# to "./public" we exclude .git/, .github/, and any other repo-root metadata
+# from the deployed site — which closes the cloneable .git directory that
+# was visible at vowloop.app/.git/HEAD.
+#
+# Build pipeline (in package.json's "build" script) copies every site file
+# into ./public so this stays a no-framework, no-bundler workflow.
+[assets]
+directory = "./public"
