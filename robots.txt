@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Don't crawl internal/utility paths
+Disallow: /.well-known/
+
+Sitemap: https://vowloop.app/sitemap.xml
