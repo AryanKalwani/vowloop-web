@@ -1,0 +1,31 @@
+# Security + caching headers, applied by Cloudflare Pages.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://*.supabase.co; form-action 'self'; frame-ancestors 'none'; base-uri 'self'
+
+# Icons cache hard — they rarely change.
+/favicon.ico
+  Cache-Control: public, max-age=604800, immutable
+/favicon.svg
+  Cache-Control: public, max-age=604800, immutable
+/apple-touch-icon*.png
+  Cache-Control: public, max-age=604800, immutable
+/android-chrome-*.png
+  Cache-Control: public, max-age=604800, immutable
+/og.png
+  Cache-Control: public, max-age=604800
+
+# Manifest gets a shorter cache so PWA install metadata can update.
+/manifest.json
+  Cache-Control: public, max-age=3600
+  Content-Type: application/manifest+json
+
+# AASA must be served as JSON without redirect for Apple to accept it.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600

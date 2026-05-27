@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — VowLoop</title>
+    <meta name="description" content="VowLoop's privacy policy: what we collect, who we share it with, and how to delete your account." />
+    <meta name="theme-color" content="#0e0e0f" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="wordmark" href="/">VOWLOOP</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/terms.html">Terms</a>
+          <a href="mailto:support@vowloop.app">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal">
+      <div class="wrap">
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: 25 May 2026</p>
+
+        <p>This Privacy Policy explains what information VowLoop ("we", "our", "the app") collects when you use the VowLoop mobile app or this website, how we use it, who we share it with, and the choices you have. We've tried to write it in plain English; the legal terms are <a href="/terms.html">in the Terms of Service</a>.</p>
+
+        <div class="callout">
+          <strong>The short version.</strong> We collect what we need to run accountability agreements between you and the partner you invite: your email, display name, the agreements you create, your check-ins, optional proof photos, and push tokens. We do not sell personal data. We do not move money. You can delete your account and your personal data from inside the app at any time.
+        </div>
+
+        <h2>1. What we collect</h2>
+
+        <h3>1.1 Information you give us</h3>
+        <ul>
+          <li><strong>Account details</strong> — your email address and display name when you sign in with Apple or Google.</li>
+          <li><strong>Agreement data</strong> — goal title, schedule, stake amount and currency, criteria text, and whether a proof or partner confirmation is required.</li>
+          <li><strong>Partner relationships</strong> — when you accept or send an invite, we link your account to the other user.</li>
+          <li><strong>Check-ins and resolutions</strong> — timestamps, status (valid / pending / missed / disputed), and any proof note or photo you attach.</li>
+          <li><strong>Reminder preferences</strong> — the days, time windows, and frequency you've chosen for push reminders.</li>
+        </ul>
+
+        <h3>1.2 Information we collect automatically</h3>
+        <ul>
+          <li><strong>Authentication tokens</strong> — stored securely on your device (iOS Keychain / Android Keystore) so you stay signed in.</li>
+          <li><strong>Push notification tokens</strong> — issued by Apple / Google / Expo, used to deliver reminders and event notifications.</li>
+          <li><strong>Crash and error reports</strong> — collected via Sentry to help us fix bugs. Includes device model, OS version, and a stack trace. We do not attach your email or display name to crash reports.</li>
+          <li><strong>Anonymous product analytics</strong> — when enabled, aggregate event data (e.g., "user opened check-in screen") is sent via PostHog. We do not track you across other apps or websites.</li>
+        </ul>
+
+        <h3>1.3 What we don't collect</h3>
+        <ul>
+          <li>We do not collect contacts, calendar, microphone audio, precise location, or health data.</li>
+          <li>We do not collect or store payment card information. Subscriptions are handled by Apple, Google, and RevenueCat.</li>
+          <li>We do not move real money between you and your partner. Settlement is recorded as a ledger entry only; how you actually settle is between the two of you.</li>
+        </ul>
+
+        <h2>2. Who we share data with</h2>
+        <p>We use a small number of service providers to operate VowLoop. Each only receives the data they need to do their job:</p>
+
+        <table>
+          <thead>
+            <tr><th>Provider</th><th>What they receive</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Supabase</strong></td><td>All app data: profiles, agreements, check-ins, proofs, ledger entries</td><td>Database, authentication, and file storage</td></tr>
+            <tr><td><strong>Expo Push</strong> / Apple APNs / Google FCM</td><td>Push tokens, neutral notification copy, structured metadata (agreement id, period key)</td><td>Deliver reminders and event alerts</td></tr>
+            <tr><td><strong>RevenueCat</strong></td><td>An anonymized app-user ID, subscription status</td><td>Manage Pro subscriptions across iOS and Android</td></tr>
+            <tr><td><strong>Sentry</strong></td><td>Crash reports, device model, app version, stack trace</td><td>Detect and fix bugs</td></tr>
+            <tr><td><strong>PostHog</strong> (optional)</td><td>Anonymous product event names, screen views</td><td>Understand which features get used so we can improve them</td></tr>
+            <tr><td><strong>Apple / Google</strong></td><td>Email address (only if you sign in with Apple or Google)</td><td>Authenticate you</td></tr>
+          </tbody>
+        </table>
+
+        <p>We do <strong>not</strong> sell personal data, and we do <strong>not</strong> share it with advertisers.</p>
+
+        <h2>3. Your partner</h2>
+        <p>When you create an agreement and a partner accepts your invite, the two of you can see the agreement details, each other's check-ins, the ledger, and any proof you attach. That's the entire point of accountability — but you should treat the partner you choose as someone you've genuinely consented to share this data with.</p>
+
+        <h2>4. How long we keep your data</h2>
+        <ul>
+          <li><strong>Active accounts</strong> — we keep your data as long as your account is active.</li>
+          <li><strong>Proof photos</strong> — automatically purged after the retention window your agreement specifies.</li>
+          <li><strong>Push tokens</strong> — removed when invalidated by Apple, Google, or Expo.</li>
+          <li><strong>Crash reports</strong> — Sentry retains for 90 days by default.</li>
+          <li><strong>Deleted accounts</strong> — when you delete your account in-app, your profile and personally-identifying rows are removed from the database within 24 hours. Aggregate ledger entries belonging to an agreement with another user remain visible to that partner (they have a vested interest in the historical record).</li>
+        </ul>
+
+        <h2>5. Your rights and choices</h2>
+        <ul>
+          <li><strong>Access</strong> — you can see your data inside the app: profile, agreements, check-ins, wallet, ledger.</li>
+          <li><strong>Delete</strong> — Profile → Delete account permanently removes your account. There is no recovery.</li>
+          <li><strong>Correction</strong> — edit your display name and reminder preferences in Profile.</li>
+          <li><strong>Opt out of analytics</strong> — coming in a future build; until then, decline notifications and PostHog will not associate device-level activity with an identified user.</li>
+          <li><strong>EU / UK / California residents</strong> — you have additional rights under GDPR / UK GDPR / CCPA, including the right to data portability and to object to processing. Email <a href="mailto:privacy@vowloop.app">privacy@vowloop.app</a> and we'll respond within 30 days.</li>
+        </ul>
+
+        <h2>6. Security</h2>
+        <p>Authentication tokens are stored in the iOS Keychain or Android Keystore. Database access is protected by row-level security policies — only you and the partner you invite can read your agreement data. Webhooks and scheduled jobs are signed and verified. Despite our best efforts, no system is perfectly secure; if we discover a breach affecting your data, we will notify you promptly and in accordance with applicable law.</p>
+
+        <h2>7. Children</h2>
+        <p>VowLoop is not directed at children under 13 and we do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+        <h2>8. International transfers</h2>
+        <p>Our database and most service providers operate in the United States. By using VowLoop you consent to your data being processed there. Where required, we use standard contractual clauses or equivalent safeguards.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>If we make material changes we'll update the "Last updated" date above and, where appropriate, notify you in-app. Continuing to use VowLoop after a change means you accept the updated policy.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions or requests: <a href="mailto:privacy@vowloop.app">privacy@vowloop.app</a>. General support: <a href="mailto:support@vowloop.app">support@vowloop.app</a>.</p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <script>document.write(new Date().getFullYear())</script> VowLoop. All rights reserved.</div>
+        <div style="display: flex; gap: 22px;">
+          <a href="/">Home</a>
+          <a href="/terms.html">Terms</a>
+          <a href="mailto:support@vowloop.app">Support</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
