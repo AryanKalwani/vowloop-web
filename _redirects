@@ -1,10 +1,8 @@
-# Block the git / dotfile leak. Anything matching these patterns returns 404.
-# Order matters — Cloudflare evaluates top to bottom and stops at the first match.
-/.git           /404  404
-/.git/*         /404  404
-/.github        /404  404
-/.github/*      /404  404
-/.DS_Store      /404  404
-
-# SPA-style fallback so /404 returns a real 404. Pages serves the file at
-# whatever path; we just want the status code.
+# Block the git / dotfile leak. The 2-part `<from> <status>` form returns a
+# bare 404 without needing a destination file. Order matters — Cloudflare
+# evaluates top to bottom and stops at the first match.
+/.git           404
+/.git/*         404
+/.github        404
+/.github/*      404
+/.DS_Store      404
