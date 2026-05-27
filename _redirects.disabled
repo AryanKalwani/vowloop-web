@@ -1,8 +1,0 @@
-# Block the git / dotfile leak. The 2-part `<from> <status>` form returns a
-# bare 404 without needing a destination file. Order matters — Cloudflare
-# evaluates top to bottom and stops at the first match.
-/.git           404
-/.git/*         404
-/.github        404
-/.github/*      404
-/.DS_Store      404
