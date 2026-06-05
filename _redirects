@@ -1,0 +1,3 @@
+# Cloudflare Pages rewrites. 200 = serve this file but keep the original URL,
+# so /invite/<token> renders the invite landing and JS can read the token.
+/invite/*  /invite.html  200

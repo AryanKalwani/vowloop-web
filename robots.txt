@@ -4,4 +4,7 @@ Allow: /
 # Don't crawl internal/utility paths
 Disallow: /.well-known/
 
+# Invite links carry a bearer token in the path — keep crawlers out.
+Disallow: /invite/
+
 Sitemap: https://vowloop.app/sitemap.xml

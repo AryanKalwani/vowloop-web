@@ -57,9 +57,26 @@ https://vowloop.app/for/creators?utm_source=reddit&utm_medium=organic&utm_campai
 
 The Supabase table records both `niche` (URL path) and `utms` (query params), so you can query "which subreddit drove the most signups for which niche" directly.
 
-## Universal links
+## Universal links & invite deep links
 
-`.well-known/apple-app-site-association` is a placeholder. Before publishing to the App Store, replace `REPLACE_WITH_TEAM_ID` with your Apple Developer Team ID (10 chars, from <https://developer.apple.com/account>).
+Partner invite links (`https://vowloop.app/invite/<token>`) open the VowLoop app
+directly when it's installed, and fall back to a landing page otherwise.
+
+- **iOS** — `.well-known/apple-app-site-association` (appID `77975GL4GA.app.vowloop.mobile`,
+  paths `/invite/*`). Served as `application/json` via `_headers`.
+- **Android** — `.well-known/assetlinks.json` (package `app.vowloop.mobile`).
+  ⚠️ Replace `REPLACE_WITH_ANDROID_SHA256_FINGERPRINT` with the production signing
+  cert's SHA-256, from `cd mobile-pixel && eas credentials` (Android → production
+  keystore → "SHA256 Fingerprint").
+- **Web fallback** — `_redirects` rewrites `/invite/*` → `/invite.html` (HTTP 200,
+  URL preserved) so non-app users get a real page instead of a download/404.
+  `invite.html` reads the token and offers an "Open in VowLoop" button.
+
+After deploying, verify:
+- `curl -sI https://vowloop.app/.well-known/apple-app-site-association` → `200` +
+  `content-type: application/json`, **no** `content-disposition`.
+- Apple's cache: <https://app-site-association.cdn-apple.com/a/v1/vowloop.app>
+- `curl -sI https://vowloop.app/invite/test-token` → `200` + `text/html`.
 
 ## Stack
 

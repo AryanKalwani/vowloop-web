@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["REPLACE_WITH_TEAM_ID.app.vowloop.mobile"],
+        "appIDs": ["77975GL4GA.app.vowloop.mobile"],
         "components": [
           {
             "/": "/invite/*",

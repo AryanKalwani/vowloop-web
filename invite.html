@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your VowLoop invite</title>
+    <meta name="description" content="You've been invited to a VowLoop accountability agreement. Open it in the app to review and accept." />
+    <!-- Token lives in the URL — never leak it via Referer to third parties (e.g. fonts). -->
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="You've been invited to VowLoop" />
+    <meta property="og:description" content="Review and accept your accountability agreement in the VowLoop app." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://vowloop.app/og.png" />
+    <meta property="og:url" content="https://vowloop.app/invite/" />
+    <meta name="theme-color" content="#0e0e0f" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- No web fonts / third-party requests on this token page: system stack only. -->
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .invite-wrap {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+      }
+      .invite-card {
+        width: 100%;
+        max-width: 420px;
+        background: var(--bg-low);
+        border: 1px solid var(--border-mid);
+        border-radius: 24px;
+        padding: 36px 28px 32px;
+      }
+      .invite-badge {
+        display: inline-block;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--primary);
+        background: var(--primary-muted);
+        border: 1px solid var(--primary-border);
+        padding: 6px 12px;
+        border-radius: 999px;
+        margin-bottom: 20px;
+      }
+      .invite-card h1 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 1.2;
+        color: var(--text);
+        margin: 0 0 12px;
+      }
+      .invite-card p {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--text-soft);
+        margin: 0 0 24px;
+      }
+      .invite-cta {
+        display: block;
+        width: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #0e0e0f;
+        background: var(--primary);
+        border: none;
+        border-radius: 14px;
+        padding: 15px 20px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .invite-foot {
+        margin-top: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .invite-foot a { color: var(--primary-soft); }
+    </style>
+  </head>
+  <body>
+    <main class="invite-wrap">
+      <section class="invite-card">
+        <span class="invite-badge">VowLoop invite</span>
+        <h1>You've been invited to an agreement</h1>
+        <p>Open this invite in the VowLoop app to review the rules, the stake, and accept.</p>
+        <a id="openApp" class="invite-cta" href="#">Open in VowLoop</a>
+        <p class="invite-foot">
+          Don't have the app yet? VowLoop is in private beta —
+          <a href="/">join the waitlist</a> and we'll get you in.
+        </p>
+      </section>
+    </main>
+    <script>
+      (function () {
+        // Path is preserved by the /invite/* -> /invite.html 200 rewrite,
+        // so we can recover the token from the original URL.
+        var match = window.location.pathname.match(/\/invite\/([^/?#]+)/);
+        var token = match ? decodeURIComponent(match[1]) : "";
+        var btn = document.getElementById("openApp");
+        if (token) {
+          // Universal link first (re-opens the app if installed); the custom
+          // scheme is the in-app fallback.
+          var universal = "https://vowloop.app/invite/" + encodeURIComponent(token);
+          btn.setAttribute("href", universal);
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "vowloop://invite/" + encodeURIComponent(token);
+            setTimeout(function () {
+              window.location.href = universal;
+            }, 600);
+          });
+        } else {
+          btn.setAttribute("href", "/");
+          btn.textContent = "Go to VowLoop";
+        }
+      })();
+    </script>
+  </body>
+</html>

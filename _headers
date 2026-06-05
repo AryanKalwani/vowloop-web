@@ -29,3 +29,15 @@
 /.well-known/apple-app-site-association
   Content-Type: application/json
   Cache-Control: public, max-age=3600
+
+# Android App Links verification file — also JSON, no redirect.
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+
+# Invite pages carry a bearer token in the URL. Don't leak it via Referer to
+# third parties, don't let it get indexed/cached, regardless of crawler behavior.
+/invite/*
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
