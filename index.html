@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VowLoop — Turn intentions into real follow-through</title>
-    <meta name="description" content="A stake-based accountability app. Set a clear agreement with someone you trust. We track the rules and the balance. You settle privately." />
-    <meta property="og:title" content="VowLoop — Turn intentions into real follow-through" />
-    <meta property="og:description" content="A stake-based accountability app. Set a clear agreement with someone you trust." />
+    <title>VowLoop — Accomplish your goals, or lose money to your accountability partner.</title>
+    <meta name="description" content="Say what you'll do, when you'll do it, and how much a miss costs. Check in with proof, and your partner confirms it. Miss, and the money's theirs." />
+    <meta property="og:title" content="VowLoop" />
+    <meta property="og:description" content="Accomplish your goals, or lose money to your accountability partner." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://vowloop.app/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -28,110 +28,124 @@
   <body>
     <header>
       <div class="wrap">
-        <a class="wordmark" href="/">VOWLOOP</a>
-        <nav>
-          <a href="/#how">How it works</a>
-          <a href="/#why">Why VowLoop</a>
-          <a href="/privacy.html">Privacy</a>
+        <a class="wordmark" href="/" aria-label="VowLoop home"><span class="seal small" aria-hidden="true">V</span>VowLoop</a>
+        <nav aria-label="Main">
+          <a class="wide-only" href="/#how">How it works</a>
+          <a class="wide-only" href="https://vowloop.app/discord">Discord</a>
+          <a href="/support">Support</a>
         </nav>
       </div>
     </header>
 
-    <section class="hero no-top-border">
-      <div class="wrap wide">
-        <span class="badge">Beta · iOS launching soon</span>
-        <h1>Turn intentions into <span class="accent">real follow&#8209;through.</span></h1>
-        <p class="lead">A clear agreement. Someone you trust. A stake that matters. VowLoop tracks the rules and the balance — you settle privately. No real money moves through the app.</p>
+    <main>
+      <section class="hero first">
+        <div class="wrap">
+          <div>
+            <span class="label status">Beta · iOS launching soon</span>
+            <h1>Accomplish your goals,<br />or lose money to your accountability partner.</h1>
+            <p class="lead">Say what you'll do, when you'll do it, and how much a miss costs. Check in with proof, and your partner confirms it. Miss, and the money's theirs.</p>
 
-        <form class="waitlist" data-niche="general" novalidate>
-          <input type="email" required placeholder="you@yours.com" aria-label="Email address" autocomplete="email" />
-          <button type="submit">Join the waitlist</button>
-        </form>
-        <div class="waitlist-msg" aria-live="polite"></div>
+            <form class="waitlist" data-niche="general" novalidate>
+              <div class="field">
+                <input type="email" required placeholder="you@yours.com" aria-label="Email address" autocomplete="email" />
+                <button class="btn-bone" type="submit">Join the waitlist</button>
+              </div>
+              <p class="waitlist-msg" aria-live="polite"></p>
+            </form>
 
-        <div class="pill-row">
-          <span class="pill">Private by default</span>
-          <span class="pill">Money-like stakes, no real money rails</span>
-          <span class="pill">Delete your data anytime</span>
+            <!-- At launch: the App Store badge (self-hosted SVG) replaces the waitlist form here. -->
+          </div>
+
+          <figure class="example" aria-label="Example: Gym by 7 AM. Kept Monday and Tuesday, missed Wednesday. You owe Sam $15.">
+            <span class="label">Example</span>
+            <div class="paper-card">
+              <p class="vow">Gym by 7 AM</p>
+              <ol class="week">
+                <li>M<span class="mark kept">✓</span></li>
+                <li>T<span class="mark kept">✓</span></li>
+                <li>W<span class="mark missed">✕</span></li>
+                <li>T<span class="mark"></span></li>
+                <li>F<span class="mark"></span></li>
+              </ol>
+              <p class="sigline">SAM SAW WEDNESDAY</p>
+              <p class="owe">You owe Sam $15.</p>
+              <span class="seal" aria-hidden="true">V</span>
+            </div>
+          </figure>
         </div>
+      </section>
 
-        <div class="agreement-card" aria-label="Example agreement">
-          <div class="line"><span class="k">Vow</span><span class="v">Run 4× per week</span></div>
-          <div class="line"><span class="k">Partner</span><span class="v">Alex (best friend)</span></div>
-          <div class="line"><span class="k">Stake per miss</span><span class="v accent">$10 to Alex</span></div>
-          <div class="line"><span class="k">Proof</span><span class="v">Photo after each run</span></div>
+      <section id="how">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="label">The loop</span>
+            <h2>How VowLoop works</h2>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <span class="num">01</span>
+              <h3>Choose a goal and a partner</h3>
+              <p>Pick a goal you want help sticking with. Choose someone you trust to check your evidence.</p>
+            </li>
+            <li class="step">
+              <span class="num">02</span>
+              <h3>Show what you did</h3>
+              <p>Each time you do your goal, send the evidence you both agreed on.</p>
+            </li>
+            <li class="step">
+              <span class="num">03</span>
+              <h3>Your partner confirms your check-in</h3>
+              <p>Your partner reviews your evidence. Once they confirm it, your check-in is complete.</p>
+            </li>
+            <li class="step miss">
+              <span class="num">04 · Miss</span>
+              <h3>You pay your partner yourself</h3>
+              <p>Pay your partner outside the app, then tap to ask them to confirm.</p>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="how">
-      <div class="wrap wide">
-        <h2>Three steps. One loop.</h2>
-        <p class="sub">Structured enough to be real. Simple enough to actually use every day.</p>
-        <div class="grid">
-          <div class="card">
-            <span class="label">01 · Agree</span>
-            <h3>Write the vow with a partner</h3>
-            <p>Pick a goal. Set the cadence and the stake. Choose someone you trust to hold the other side. Strict mode locks the rules; partner-confirm makes every check-in count.</p>
+      <section>
+        <div class="wrap ledger">
+          <div>
+            <span class="label">The money</span>
+            <h2>No payments move through VowLoop.</h2>
+            <p>Your agreement and balance stay private between you and your partner.</p>
           </div>
-          <div class="card">
-            <span class="label">02 · Check in</span>
-            <h3>Show up, every period</h3>
-            <p>Submit a short check-in on schedule. Add a proof note or photo if you opted in. Your partner confirms it — or, if you miss, the period closes and the stake posts to the ledger.</p>
-          </div>
-          <div class="card">
-            <span class="label">03 · Settle</span>
-            <h3>Square up — privately</h3>
-            <p>VowLoop tracks who owes what across the agreement. When you're ready, mark it settled. We don't move money. The trust and the transaction stay between you and your partner.</p>
-          </div>
+          <ul class="ledger-rows" aria-label="Who pays what">
+            <li><span>A miss</span><span>Settled between the two of you</span></li>
+            <li><span>Payments through VowLoop</span><span>None</span></li>
+            <li><span>Your partner</span><span>Joins free. Always.</span></li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="why">
-      <div class="wrap wide">
-        <h2>Built for promises that actually matter.</h2>
-        <p class="sub">Streak apps reward consistency in a vacuum. VowLoop adds a person and a stake — the two things research and your own gut already know move behavior.</p>
-        <div class="grid">
-          <div class="card">
-            <span class="label">A · Stakes</span>
-            <h3>Real consequences, your terms</h3>
-            <p>You owe your partner directly — not an app, not a charity, not us. Money you'd actually hand them. Dinner you'd actually cook. A chore you'd actually take. VowLoop holds the ledger; the settlement happens between the two of you.</p>
-          </div>
-          <div class="card">
-            <span class="label">B · Grace</span>
-            <h3>Built-in room for being human</h3>
-            <p>Request grace when life genuinely happens. Your partner decides. Dispute a missed day if the system got it wrong. Firm, not punitive.</p>
-          </div>
-          <div class="card">
-            <span class="label">C · Privacy</span>
-            <h3>Yours, not ours</h3>
-            <p>Your agreements, photos, and ledger are visible only to you and your partner. Delete your account from inside the app at any time — your data goes with it.</p>
-          </div>
+      <section class="closing">
+        <div class="wrap narrow">
+          <h2>Ready when you are.</h2>
+          <p class="sub">VowLoop launches on the App Store soon. Get on the list and we'll let you know the day it goes live.</p>
+          <form class="waitlist" data-niche="general" novalidate>
+            <div class="field">
+              <input type="email" required placeholder="you@yours.com" aria-label="Email address" autocomplete="email" />
+              <button class="btn-bone" type="submit">Join the waitlist</button>
+            </div>
+            <p class="waitlist-msg" aria-live="polite"></p>
+          </form>
+          <!-- At launch: the App Store badge (self-hosted SVG) replaces the waitlist form here. -->
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap" style="text-align: center;">
-        <h2 style="margin-left: auto; margin-right: auto;">Ready when you are.</h2>
-        <p class="sub" style="margin-left: auto; margin-right: auto;">VowLoop launches on the App Store soon. Get on the list and we'll let you know the day it goes live.</p>
-        <form class="waitlist" data-niche="general" novalidate style="margin-left: auto; margin-right: auto;">
-          <input type="email" required placeholder="you@yours.com" aria-label="Email address" autocomplete="email" />
-          <button type="submit">Join the waitlist</button>
-        </form>
-        <div class="waitlist-msg" aria-live="polite" style="text-align: center;"></div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div class="wrap">
-        <div>© <script>document.write(new Date().getFullYear())</script> VowLoop. All rights reserved.</div>
-        <div style="display: flex; gap: 22px;">
+        <span class="brand"><span class="seal small" aria-hidden="true">V</span>© 2026 VowLoop</span>
+        <nav aria-label="Footer">
+          <a href="/support">Support</a>
+          <a href="https://vowloop.app/discord">Discord</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
-          <a href="mailto:support@vowloop.app">Support</a>
-        </div>
+        </nav>
       </div>
     </footer>
 

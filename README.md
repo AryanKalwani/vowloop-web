@@ -1,6 +1,6 @@
 # vowloop-web
 
-Static marketing + legal site for [VowLoop](https://vowloop.app). Zero build step, deploys straight to Cloudflare Pages (or any static host).
+Static marketing + legal site for [VowLoop](https://vowloop.app). Zero build step, deploys straight to Cloudflare Workers (or any static host).
 
 ## Layout
 
@@ -12,6 +12,7 @@ Static marketing + legal site for [VowLoop](https://vowloop.app). Zero build ste
 /for/focus/             niche D — screen time, doomscroll, digital reset
 /privacy.html           privacy policy
 /terms.html             terms of service
+/support                support.html      — contact + FAQ
 /styles.css             shared Kept Word tokens, mirrors the app theme
 /waitlist.js            shared form handler → POSTs to Supabase edge function
 /.well-known/apple-app-site-association   universal links (Apple team ID required)
@@ -27,14 +28,12 @@ npx serve .
 python3 -m http.server 4321
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-2. Select this repo.
-3. Build settings: build command empty, output directory `/` (root).
-4. Add custom domain `vowloop.app` once DNS is on Cloudflare.
-
-Pushes to `main` auto-deploy.
+- vowloop.app is a Cloudflare Workers project that serves the repo root as static assets. Pushes to `main` deploy it.
+- `.assetsignore` keeps `.git`, `public/`, `functions/` and `README.md` out of the deployed assets.
+- `_redirects` rewrites `/invite/<token>` to `/invite`, the invite page (`invite.html`).
+- `public/` is a stale copy of the site and isn't served.
 
 ## Waitlist backend
 
