@@ -1,3 +1,5 @@
-# Cloudflare Pages rewrites. 200 = serve this file but keep the original URL,
+# Cloudflare rewrites. 200 = serve this page but keep the original URL,
 # so /invite/<token> renders the invite landing and JS can read the token.
-/invite/*  /invite.html  200
+# Target /invite, not /invite.html: Workers redirects /invite.html to /invite,
+# and that redirect drops the token.
+/invite/*  /invite  200

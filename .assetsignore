@@ -1,0 +1,10 @@
+# Files Workers must not serve. Wrangler reads this when it uploads the site,
+# because the site is served from the repo root.
+# Keep .well-known (universal links) and apple-app-site-association served.
+.git
+.gitignore
+.assetsignore
+.DS_Store
+README.md
+functions
+public
