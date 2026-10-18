@@ -4,8 +4,8 @@
   "description": "Stake-based accountability. Set a clear agreement with someone you trust. Settle privately.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0e0e0f",
-  "theme_color": "#0e0e0f",
+  "background_color": "#131110",
+  "theme_color": "#131110",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

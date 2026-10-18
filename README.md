@@ -12,7 +12,7 @@ Static marketing + legal site for [VowLoop](https://vowloop.app). Zero build ste
 /for/focus/             niche D — screen time, doomscroll, digital reset
 /privacy.html           privacy policy
 /terms.html             terms of service
-/styles.css             shared Neon Discipline tokens, mirrors the app theme
+/styles.css             shared Kept Word tokens, mirrors the app theme
 /waitlist.js            shared form handler → POSTs to Supabase edge function
 /.well-known/apple-app-site-association   universal links (Apple team ID required)
 ```
@@ -81,7 +81,7 @@ After deploying, verify:
 ## Stack
 
 - Pure HTML / CSS / vanilla JS, no framework, no bundler
-- Inter (body) + Manrope (display) via Google Fonts
-- Palette mirrors the app's "Neon Discipline" tokens (`mobile-pixel/src/theme.ts`)
+- Inter (body) + Fraunces (display) + IBM Plex Mono (ledger labels) via Google Fonts
+- Palette mirrors the app's "Kept Word" tokens (`mobile-pixel/src/theme.ts`)
 
 The privacy and terms text is honest about the app's actual data flow but is **not legal advice** — get a lawyer review before launching in regulated jurisdictions.

@@ -43,17 +43,18 @@ function renderInvite(token) {
     <meta name="description" content="You've been invited to a VowLoop accountability agreement. Open it in the app to review and accept." />
     <meta name="referrer" content="no-referrer" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#0e0e0f" />
+    <meta name="theme-color" content="#131110" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
       .invite-wrap { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; }
-      .invite-card { width: 100%; max-width: 420px; background: var(--bg-low); border: 1px solid var(--border-mid); border-radius: 24px; padding: 36px 28px 32px; }
-      .invite-badge { display: inline-block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); background: var(--primary-muted); border: 1px solid var(--primary-border); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px; }
-      .invite-card h1 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-weight: 800; font-size: 26px; line-height: 1.2; color: var(--text); margin: 0 0 12px; }
+      .invite-card { width: 100%; max-width: 420px; background: var(--bg-high); border: 1px solid var(--border-mid); border-radius: 24px; padding: 36px 28px 32px; box-shadow: var(--shadow); }
+      .invite-badge { display: inline-block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary-soft); background: var(--primary-muted); border: 1px solid var(--primary-border); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px; }
+      .invite-card h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 26px; line-height: 1.2; color: var(--text); margin: 0 0 12px; }
       .invite-card p { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-size: 15px; line-height: 1.55; color: var(--text-soft); margin: 0 0 24px; }
-      .invite-cta { display: block; width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-weight: 700; font-size: 16px; color: #0e0e0f; background: var(--primary); border: none; border-radius: 14px; padding: 15px 20px; text-decoration: none; cursor: pointer; }
+      .invite-cta { display: block; width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-weight: 700; font-size: 16px; color: var(--bg); background: var(--primary); border: none; border-radius: 14px; padding: 15px 20px; text-decoration: none; cursor: pointer; }
+      .invite-cta:hover { color: var(--bg); background: var(--primary-soft); opacity: 1; }
       .invite-foot { margin-top: 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif; font-size: 13px; color: var(--text-muted); }
       .invite-foot a { color: var(--primary-soft); }
     </style>
