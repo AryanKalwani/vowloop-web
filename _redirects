@@ -1,3 +1,8 @@
+# Discord community: an invite that never expires. 302, not 301, so swapping
+# the invite means changing only these lines, with no browser caching the old one.
+/discord   https://discord.gg/7Cjbyt4kNv  302
+/discord/  https://discord.gg/7Cjbyt4kNv  302
+
 # Cloudflare rewrites. 200 = serve this page but keep the original URL,
 # so /invite/<token> renders the invite landing and JS can read the token.
 # Target /invite, not /invite.html: Workers redirects /invite.html to /invite,
